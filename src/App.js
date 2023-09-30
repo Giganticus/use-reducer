@@ -29,6 +29,8 @@ function App() {
   };
 
   return (
+    /* ok to not use context for pass loginHandler and logoutHandler, as in Login, the loginHandler function is used, not just forwarded on
+     * and the same goes for Home: the logoutHandler is used there, not forwarded on*/
     <AuthContext.Provider
       value={{ isLoggedIn: isLoggedIn, onLogout: logoutHandler }}
     >
